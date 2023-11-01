@@ -44,7 +44,7 @@ export default function Login() {
             // loaderBtn.style.backgroundColor = "rgb(52 136 223)"
             localStorage.setItem('token', data.authtoken);
 
-            history.push("/news");
+            history.push("/profile");
 
         }
     }

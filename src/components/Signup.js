@@ -44,7 +44,7 @@ export default function Signup() {
 
                 setTimeout(() => {
                     localStorage.setItem('token', data.authtoken);
-                    history.push("/news");
+                    history.push("/profile");
                 }, 1000);
                 // }, 0);
 

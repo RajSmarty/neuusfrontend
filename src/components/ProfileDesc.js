@@ -20,7 +20,7 @@ export default function ProfileDesc() {
     // CONTEXT API LOGIC
     const context = useContext(codeContext);
 
-    const { codes, getCodes, addCode } = context;
+    const { codes,json, getCodes, addCode } = context;
 
     const [code, setCode] = useState({ newssource: "", newscategory: "", newstype: "" })
 
@@ -45,9 +45,9 @@ export default function ProfileDesc() {
         <div className='container'>
             <div style={{ display: "flex" }}>
                 <div style={{ border: "0px solid red", width: "70%" }}>
-                    <h1 style={{ letterSpacing: "-4px", fontSize: "3em", height: "37px" }} className='logopara'>neuus<span className="dot"></span>
+                <Link to="/news" style={{color:"black"}}><h1 style={{ letterSpacing: "-4px", fontSize: "3em", height: "37px" }} className='logopara'>neuus<span className="dot"></span>
                         {/* <span style={{ color: "#57c0db", marginLeft: "2px", marginBottom: "0px" }}>.</span> */}
-                    </h1>
+                    </h1></Link>
                 </div>
                 <div style={{ border: "0px solid red", width: "28.5%" }}>
                     <div style={{ display: "flex", justifyContent: "end", alignItems: "center", marginTop: "15px", border: "1px solid gray", borderRadius: "6px" }}>
@@ -73,7 +73,16 @@ export default function ProfileDesc() {
                         <div className="col-md-6">
                             <div className="profile-head">
                                 <h5>
-                                    Raj Mishra
+                                    {/* Raj Mishra */}
+                                    {json.map((jsonobj) => {
+                                            return (
+                                                <>
+                                                    <section key={jsonobj._id} jsonobj={jsonobj}>
+                                                        <h5>{jsonobj.name}</h5>
+                                                    </section>
+                                                </>
+                                            )
+                                        })}
                                 </h5>
                                 <h6>
                                     (Bio/Name-Alias Section)
@@ -113,8 +122,8 @@ export default function ProfileDesc() {
                                     })}
                                 </div>
 
-                                {/* <div>
-                                    <p>News Categories</p>
+                                <div>
+                                    <p>News Language</p>
 
                                     {codes.map((code) => {
                                         return (
@@ -129,13 +138,13 @@ export default function ProfileDesc() {
                                 </div>
 
                                 <div>
-                                    <p>News Types</p>
+                                    <p>Audible Language</p>
 
                                     {codes.map((code) => {
                                         return (
                                             <section key={code._id} code={code}>
                                                 <div style={{ display: "flex", justifyContent: "space-between" }}>
-                                                    <p style={{ lineHeight: "0px", color: "#03a5fc", cursor: "pointer" }}>Apple</p>
+                                                    <p style={{ lineHeight: "0px", color: "#03a5fc", cursor: "pointer" }}>{code.newstype}</p>
                                                     <img alt="" style={{ height: "1.5em", marginTop: "10px", marginLeft: "50%", cursor: "pointer" }} src="https://img.icons8.com/fluency/48/undefined/delete-trash.png" />
                                                 </div>
                                             </section>
@@ -143,7 +152,7 @@ export default function ProfileDesc() {
                                     })}
 
 
-                                </div> */}
+                                </div>
                             </div>
                         </div>
                         <div className="col-md-8">
@@ -159,25 +168,25 @@ export default function ProfileDesc() {
                                             <li onClick={handleClick} style={{ color: "white", backgroundColor: "rgb(27 145 187)", fontSize: "13px", padding: "4.5px 15px" }} className="mx-2 btn">ADD</li>
                                         </div>
                                     </div>
-                                    {/* <div className="row">
+                                    <div className="row">
                                         <div className="col-md-6">
-                                            <label>News Category</label>
+                                            <label>News Language</label>
                                         </div>
                                         <div className="col-md-6 mt-2">
-                                            <input style={{ width: "70%", borderRadius: "6px", border: "1px solid gray" }} type="text" id="newssource" name="newscategory" value={code.newscategory} onChange={onChange} minLength={5} />
+                                            <input style={{ width: "70%", borderRadius: "6px", border: "1px solid gray" }} type="text" id="newscategory" name="newscategory" value={code.newscategory} onChange={onChange} minLength={5} />
                                             <button onClick={handleClick} style={{ color: "white", backgroundColor: "rgb(27 145 187)", fontSize: "13px", padding: "4.5px 15px" }} className="mx-2 btn">ADD</button>
                                         </div>
                                     </div>
                                     <div className="row">
                                         <div className="col-md-6">
-                                            <label>News Type</label>
+                                            <label>Audible Language</label>
                                         </div>
                                         <div className="col-md-6 mt-2">
-                                            <input style={{ width: "70%", borderRadius: "6px", border: "1px solid gray" }} type="text" id="newssource" name="newstype" value={code.newstype} onChange={onChange} minLength={5} />
+                                            <input style={{ width: "70%", borderRadius: "6px", border: "1px solid gray" }} type="text" id="newstype" name="newstype" value={code.newstype} onChange={onChange} minLength={5} />
                                             <button onClick={handleClick} style={{ color: "white", backgroundColor: "rgb(27 145 187)", fontSize: "13px", padding: "4.5px 15px" }} className="mx-2 btn">ADD</button>
                                         </div>
-                                    </div> */}
-                                    <div className="row">
+                                    </div>
+                                    {/* <div className="row">
                                         <div className="col-md-6">
                                             <label>News Language</label>
                                         </div>
@@ -194,7 +203,7 @@ export default function ProfileDesc() {
                                             <input style={{ width: "70%", borderRadius: "6px", border: "1px solid gray" }} type="text" />
                                             <button style={{ color: "white", backgroundColor: "rgb(27 145 187)", fontSize: "13px", padding: "4.5px 15px" }} className="mx-2 btn">ADD</button>
                                         </div>
-                                    </div>
+                                    </div> */}
                                     <div className="row">
                                         <div className="mt-3 col-md-12">
                                             <div style={{ display: "flex", justifyContent: "center", marginRight: "10em" }}>

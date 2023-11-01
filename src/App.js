@@ -16,6 +16,7 @@ import Codestate from './context/codes/Codestate';
 import ReaderPage from './components/ReaderPage';
 import Professional from './components/Professional';
 import Trending from './components/Trending';
+import Newhome from './components/Newhome';
 // import Newsz from './components/Newsz';
 // import Selectnews from './components/Seclectnews';
 
@@ -40,6 +41,8 @@ const App = () => {
             />
 
             <Switch>
+            <Route exact path="/newhome"><Newhome/>
+            </Route>
               <Route exact path="/news"><News setProgress={setProgress} apiKey={apiKey} pageSource={pageSource} key="general" pageSize={pageSize} country="gb" category="general" /></Route>
               <Route exact path="/pro"><Professional setProgress={setProgress} apiKey={apiKey} pageSource={pageSource} key="Professional" pageSize={pageSizeDup} country="gb" category="technology" /></Route>
               <Route exact path="/trending"><Trending setProgress={setProgress} apiKey={apiKey} pageSource={pageSource} key="Trending" pageSize={pageSize} country="gb" category="health" /></Route>

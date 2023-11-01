@@ -56,8 +56,8 @@ export default function Profile() {
                     {/* -------------------Company Logo Starts-------------->>>>>>>>>>>>>>>>>>>>>>> */}
                     <div style={{ display: "flex" }}>
                         <div style={{ border: "0px solid red", width: "70%" }}>
-                            <h1 style={{ letterSpacing: "-4px", fontSize: "3em", height: "37px" }} className='logopara'>neuus<span className="dot"></span>
-                            </h1>
+                           <Link to="/news" style={{color:"black"}}> <h1 style={{ letterSpacing: "-4px", fontSize: "3em", height: "37px" }} className='logopara'>neuus<span className="dot"></span>
+                            </h1></Link>
                         </div>
                         <div style={{ border: "0px solid red", width: "28.5%" }}>
                             <div style={{ display: "flex", justifyContent: "end", alignItems: "center", marginTop: "15px", border: "1px solid gray", borderRadius: "6px" }}>

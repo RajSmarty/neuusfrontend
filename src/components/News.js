@@ -100,22 +100,33 @@ const News = (props) => {
                                             {/* First Search Box */}
                                             <div className='mquery1 mx-4' style={{ border: "0px solid red", width: "28.5%" }}>
                                                 <div style={{ display: "flex", justifyContent: "end", alignItems: "center", marginTop: "15px", border: "1px solid gray", borderRadius: "6px" }}>
-                                                    <input className='text-right' style={{ border: "0px solid gray", backgroundColor: "transparent", padding: "5px 50px" }} type="text" placeholder='Search' />
+                                                    <input className='text-right' style={{ border: "0px solid gray", backgroundColor: "transparent", padding: "5px 50px" }} type="text" placeholder='Interests' />
+                                                    <button style={{ backgroundColor: "transparent", border: "0px solid gray" }}><img alt='' style={{ height: "1.2em", }} src={searchIcon} /></button>
+
+
+
+                                                </div>
+                                            </div>
+
+                                            {/* ADD & DELETE Buttons */}
+                                            <div className='mquery1' style={{ border: "0px solid red", width: "11%" }}>
+                                                <div style={{ display: "flex", justifyContent: "end", alignItems: "center", marginTop: "15px", border: "0px solid gray", borderRadius: "15px" }}>
+
+                                                    <button style={{ border: "4.5px solid green", borderRadius: "8px" }} className='mx-2'>ADD</button>
+                                                    <button style={{ border: "4.5px solid red", borderRadius: "8px" }}>DELETE</button>
+                                                </div>
+                                            </div>
+
+
+                                            {/* Interest Search Box */}
+                                            {/* <div className='mquery1' style={{ border: "0px solid red", width: "18.5%" }}>
+                                                <div style={{ display: "flex", justifyContent: "end", alignItems: "center", marginTop: "15px", border: "1px solid gray", borderRadius: "15px" }}>
+                                                    <input className='text-center' style={{ border: "0px solid gray", backgroundColor: "transparent", padding: "5px 1px" }} type="text" placeholder='Interests' />
                                                     <button style={{ backgroundColor: "transparent", border: "0px solid gray" }}><img alt='' style={{ height: "1.2em", }} src={searchIcon} /></button>
                                                     
 
                                                 </div>
-                                            </div>
-
-                                            {/* Interest Search Box */}
-                                            <div className='mquery1' style={{ border: "0px solid red", width: "18.5%" }}>
-                                                <div style={{ display: "flex", justifyContent: "end", alignItems: "center", marginTop: "15px", border: "1px solid gray", borderRadius: "15px" }}>
-                                                    <input className='text-center' style={{ border: "0px solid gray", backgroundColor: "transparent", padding: "5px 1px" }} type="text" placeholder='Interests' />
-                                                    {/* <button style={{ backgroundColor: "transparent", border: "0px solid gray" }}><img alt='' style={{ height: "1.2em", }} src={searchIcon} /></button> */}
-                                                    
-
-                                                </div>
-                                            </div>
+                                            </div> */}
                                         </div>
                                         <span style={{ fontSize: "1em", marginLeft: "0rem", fontWeight: "bold" }}>See what's trending from around the world.</span>
                                         {/* <<<<<<<<<<<<<<<<<<<<<<Company Logo Ends------------------------------------*/}
@@ -133,17 +144,17 @@ const News = (props) => {
 
 
                                 <div style={{ marginTop: "2.5em", display: "flex" }}>
-                                    
-                                    <p className='text-center categoryUnderline' style={{ width: "50%", marginTop: "8px", fontSize: "1.5rem", fontWeight: "bold", cursor: "pointer", borderBottom:"2px solid #00b0e6" }}>
-                                    <Link to="/news" style={{color:"black"}}><p style={{ borderRight: "1px solid rgb(149 146 159 / 32%)" }}> My neuus</p></Link>
+
+                                    <p className='text-center categoryUnderline' style={{ width: "50%", marginTop: "8px", fontSize: "1.5rem", fontWeight: "bold", cursor: "pointer", borderBottom: "2px solid #00b0e6" }}>
+                                        <Link to="/news" style={{ color: "black" }}><p style={{ borderRight: "1px solid rgb(149 146 159 / 32%)" }}> My neuus</p></Link>
                                     </p>
-                                    
+
                                     <p className='text-center categoryUnderline' style={{ width: "50%", marginTop: "8px", fontSize: "1.5rem", fontWeight: "bold", cursor: "pointer", }}>
-                                    <Link to="/trending" style={{color:"black"}}><p style={{ borderRight: "1px solid rgb(149 146 159 / 32%)" }}>Trending</p></Link>
+                                        <Link to="/trending" style={{ color: "black" }}><p style={{ borderRight: "1px solid rgb(149 146 159 / 32%)" }}>Trending</p></Link>
                                     </p>
-                                    
+
                                     <p className='text-center categoryUnderline' style={{ width: "50%", marginTop: "8px", fontSize: "1.5rem", fontWeight: "bold", cursor: "pointer", }}>
-                                    <Link to="/pro" style={{color:"black"}}><p>Professional</p></Link>
+                                        <Link to="/pro" style={{ color: "black" }}><p>Professional</p></Link>
                                     </p>
                                 </div>
                                 {/* <hr /> */}

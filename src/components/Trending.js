@@ -107,15 +107,17 @@ const Trending = (props) => {
                                                 </div>
                                             </div>
 
+                                            
+
                                             {/* Interest Search Box */}
-                                            <div className='mquery1' style={{ border: "0px solid red", width: "18.5%" }}>
+                                            {/* <div className='mquery1' style={{ border: "0px solid red", width: "18.5%" }}>
                                                 <div style={{ display: "flex", justifyContent: "end", alignItems: "center", marginTop: "15px", border: "1px solid gray", borderRadius: "15px" }}>
                                                     <input className='text-center' style={{ border: "0px solid gray", backgroundColor: "transparent", padding: "5px 1px" }} type="text" placeholder='Interests' />
-                                                    {/* <button style={{ backgroundColor: "transparent", border: "0px solid gray" }}><img alt='' style={{ height: "1.2em", }} src={searchIcon} /></button> */}
+                                                    <button style={{ backgroundColor: "transparent", border: "0px solid gray" }}><img alt='' style={{ height: "1.2em", }} src={searchIcon} /></button>
                                                     
 
                                                 </div>
-                                            </div>
+                                            </div> */}
                                         </div>
                                         <span style={{ fontSize: "1em", marginLeft: "0rem", fontWeight: "bold" }}>See what's trending from around the world.</span>
                                         {/* <<<<<<<<<<<<<<<<<<<<<<Company Logo Ends------------------------------------*/}
